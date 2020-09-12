@@ -10,7 +10,7 @@ public class Processos extends Thread{
 
     public void run(){
 
-        for(int i = 1; i<=10; i++){
+        for(int i = 1; i<=20; i++){
             System.out.println("Inicio do processo!");
         
         
