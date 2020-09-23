@@ -4,10 +4,11 @@ public class Multiplica extends Thread {
     private String nome;
     private int valorMultiplicar;
     private int tempo;
-
+    private boolean parada;
     public Multiplica(String name, int valor) {
         this.nome = name;
         this.valorMultiplicar = valor;
+        this.parada = false;
         this.start();
     }
 
@@ -21,6 +22,16 @@ public class Multiplica extends Thread {
            
             try {
                 this.sleep(tempo);
+
+                while(parada){
+                    
+                }
+                if( x == 5){
+                    synchronized (this){
+                        System.out.println("Parou Aqui: " + this.nome);
+                        wait();
+                    }
+                }
             } catch (InterruptedException e) {
                 // TODO Auto-generated catch block
                 e.printStackTrace();
