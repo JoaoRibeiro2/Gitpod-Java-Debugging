@@ -7,13 +7,15 @@ import tarefas.Fatora;
  */
 public class App {
 
-   
     public static void main(String[] args) {
-        // Multiplica m = new Multiplica("10", 10);
-        // m.setTempo(1000);
+        Multiplica m = new Multiplica("10", 10);
+        m.setTempo(1000);
 
-        Fatora f = new Fatora(5);
-        f.start();
+
+        Multiplica m2 = new Multiplica("20", 20);
+        m2.setTempo(500);
+        // Fatora f = new Fatora(5);
+        // f.start();
         // m.start();
     }
 
